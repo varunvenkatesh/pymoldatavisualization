@@ -1,0 +1,3 @@
+# Add file patterns here that are to be ignored:
+.buildpath
+.project
