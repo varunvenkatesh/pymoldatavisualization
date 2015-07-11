@@ -11,12 +11,12 @@ for i in xrange(number):
 # Close opend file
 fo.close()
 
-# /Users/varunvenkatesh/Downloads/TtLSU.pdb
-with open('ddginput.txt', 'r') as fstream:
-    for line in fstream:
-        #line = re.sub(r' +', r' ', line.rstrip())
-        print line
-    
+# Read in the pdb data file:
+#fstream = open("tester.txt", "r")
+fstream = open("TtLSU.pdb", "r")
+for line in fstream:
+    print line.strip()
+        #line = re.sub(r' +', r' ', line.rstrip())    
 
 ## with open('test1.txt', 'w') as outf:
 ##    for line in inf:
