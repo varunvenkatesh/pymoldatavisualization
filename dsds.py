@@ -47,7 +47,7 @@ for line in fstream:
     # print tuple.rstrip()
 
     # Dump each tuple (row) into the tmp file.
-    # The split removes the extra white space.
+    # The rstrip removes the extra white space from the end.
     fstreamtmp.write(str(tuple.rstrip()) + "\n")
 
 fstream.close()
