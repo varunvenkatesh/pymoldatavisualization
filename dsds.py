@@ -1,4 +1,4 @@
-import fileinput
+#!/usr/bin/python
 import re
 import random
  
