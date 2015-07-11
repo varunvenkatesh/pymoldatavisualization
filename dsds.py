@@ -38,7 +38,7 @@ for line in fstream:
     columns = line.rstrip().split(' ');
     columns[9] = numbers[i]
     i += 1
-    # Rebuild our string:
+    # Build our string:
     tuple = ""
     for word in columns:
         tuple += word + " "
