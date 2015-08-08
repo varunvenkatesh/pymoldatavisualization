@@ -6,6 +6,8 @@ import math
 import os
 import random
 import re
+from collections import defaultdict
+
 ## Method to get rid of white space in the datafile
 TARGETFILE = "/Users/varunvenkatesh/Downloads/example"
 LIMIT = 10
@@ -18,6 +20,7 @@ fstream    = open(TARGETFILE+".rtf", "r")
 ###
 #fstreamtmp = open(TARGETFILE+".rtf.tmp", "w")
 
+map = defaultdict(int)
 
 i = 0
 for line in fstream:
@@ -28,10 +31,10 @@ for line in fstream:
     # "105 102 925.0574"
     # columns[0] = 105
     # columns[1] = 102
-    # columns[2] = 925.0754
+    # columns[2] = 925
     #
     ###
-    print line
+    #print line
     #numbers[i] = 
     #print columns[1]
     i += 1
@@ -39,3 +42,19 @@ for line in fstream:
     #tuple = ""
     #for word in columns:
     #    tuple += word + " "
+
+    #code to store and average values
+
+    #105 102 25
+    #132 102 10
+    
+    #map[102] = 0 + 25
+    #map[102] -> 25
+    #map[102] = 25 + 10
+    #map[102] -> 35
+
+    val = map[columns[1]]
+    print "Value of key at columns[1] -> " + str(val)
+    map[columns[1]] += float(columns[2])
+    print columns[1]
+    print map[columns[1]]
